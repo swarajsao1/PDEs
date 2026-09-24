@@ -406,6 +406,7 @@ The grid looks like:
         Δx
 ```
 
+In 2D the grids look like:
 
 ```text
                  t
