@@ -1,4 +1,4 @@
-# 2D Meshrepresentation
+# 2D Mesh representation
 
 For a two-dimensional problem, the domain can be divided into a two-dimensional grid:
 
@@ -15,18 +15,18 @@ $$
 In 2D the mesh look like:
 
 ```text
-                 y
+                 y(t)
                  ↑
                  │
-        y₃       ●──────●──────●──────●──────●
-              Δy │      │      │      │      │
-        y₂       ●──────●──────●──────●──────●
+        y₃(t)    ●──────●──────●──────●──────●
+                 │      │      │      │      │  Δy_{t}
+        y₂(t)    ●──────●──────●──────●──────●
                  │      │      │      │      │
-        y₁       ●──────●──────●──────●──────●
+        y₁(t)    ●──────●──────●──────●──────●
                  │      │      │      │      │
-        y₀       ●──────●──────●──────●──────●──→ x
-                 x₀     x₁     x₂     x₃     x₄
-                           Δx
+        y₀(t)    ●──────●──────●──────●──────●──→ x(t)
+                 x₀(t)  x₁(t)  x₂(t)  x₃(t)  x₄(t)
+                           Δx_{t}
 ```
 
 

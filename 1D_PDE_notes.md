@@ -405,8 +405,30 @@ $$
 The grid looks like:
 
 ```text
-               ●────●────●────●────●────●──→ x
-               0    1    2    3    4    5
-                      Δx
+               ●─────────●─────────●─────────●─────────●──→ x
+              x_0(t)    x_1(t)    x_2(t)    x_3(t)     x_4(t)    
+                           Δx_{t}
 ```
 
+# 8. Solution interpretation
+
+The numerical solution is represented as
+
+$$
+u_i^n=u(x_i,t^n).
+$$
+
+Here:
+
+- $i$ identifies the spatial grid point.
+- $n$ identifies the time level.
+- $\Delta x$ is the spatial grid spacing.
+- $\Delta t$ is the time step.
+
+Therefore, instead of solving for the continuous function $u(x,t)$, we calculate a finite collection of values
+
+$$
+u_i^n.
+$$
+
+The PDE is then converted into a system of algebraic equations involving these values.
