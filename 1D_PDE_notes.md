@@ -407,7 +407,7 @@ The grid looks like:
 ```text
                ●─────────●─────────●─────────●─────────●──→ x
                x₀(t)     x₁(t)     x₂(t)     x₃(t)     x₄t)    
-                           $Δx_{t}$
+                           $\Delta x_{t}$
 ```
 
 # 8. Solution interpretation
