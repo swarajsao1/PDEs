@@ -405,9 +405,9 @@ $$
 The grid looks like:
 
 ```text
-               ●─────────●─────────●─────────●─────────●──→ x
-               x₀(t)     x₁(t)     x₂(t)     x₃(t)     x₄t)    
-                           $\Delta x_{t}$
+               ●────●────●────●────●────●──→ x
+               0    1    2    3    4    5
+                      Δx
 ```
 
 # 8. Solution interpretation

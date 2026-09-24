@@ -1,42 +1,44 @@
 # 2D Mesh representation
 
-For a two-dimensional problem, the domain can be divided into a two-dimensional grid:
-
 $$
-(x_i,y_j).
+T_{i,j}^{\,n}=T(x_i,y_j,t_n).
 $$
 
-The solution is then represented as
-
-$$
-T_{i,j}=T(x_i,y_j).
-$$
-
-In 2D the mesh look like:
+For the 2D heat equation, we discretize both space and time.
+The spatial grid is
 
 ```text
-                 y(t)
+                 y
                  ↑
                  │
-        y₃(t)    ●──────●──────●──────●──────●
-                 │      │      │      │      │  $\Delta y_{t}$
-        y₂(t)    ●──────●──────●──────●──────●
+        y₃       ●──────●──────●──────●──────●
+            Δy   │      │      │      │      │
+        y₂       ●──────●──────●──────●──────●
                  │      │      │      │      │
-        y₁(t)    ●──────●──────●──────●──────●
+        y₁       ●──────●──────●──────●──────●
                  │      │      │      │      │
-        y₀(t)    ●──────●──────●──────●──────●──→ x(t)
-                 x₀(t)  x₁(t)  x₂(t)  x₃(t)  x₄(t)
-                          $\Delta x_{t}$
+        y₀       ●──────●──────●──────●──────● ──→ x
+                 x₀     x₁     x₂     x₃     x₄
+                           Δx
 ```
 
+## The solution
+
+Numerical solution are as a **stack of identical spatial grids**:
+
+```text
+        t₃ ──→  T³ᵢⱼ
+        t₂ ──→  T²ᵢⱼ
+        t₁ ──→  T¹ᵢⱼ
+        t₀ ──→  T⁰ᵢⱼ
+```
 
 # 2D Laplace equation
 
 $$
 \frac{\partial^2u}{\partial x^2}
 +
-\frac{\partial^2u}{\partial y^2}
-=0
+\frac{\partial^2u}{\partial y^2} = 0
 $$
 
 can be approximated using
