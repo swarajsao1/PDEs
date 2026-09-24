@@ -406,8 +406,8 @@ The grid looks like:
 
 ```text
                ●─────────●─────────●─────────●─────────●──→ x
-              x_0(t)    x_1(t)    x_2(t)    x_3(t)     x_4(t)    
-                           Δx_{t}
+               x₀(t)     x₁(t)     x₂(t)     x₃(t)     x₄t)    
+                           $Δx_{t}$
 ```
 
 # 8. Solution interpretation
