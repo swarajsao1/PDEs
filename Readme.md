@@ -306,14 +306,8 @@ Substituting these into the heat equation,
 $$
 \frac{T_i^{n+1}-T_i^n}{\Delta t} =
 \alpha
-\frac{
-T_{i+1}^n
--
-2T_i^n
-+
-T_{i-1}^n
-}
-{\Delta x^2}.
+\frac{T_{i+1}^n - 2T_i^n + T_{i-1}^n}
+{\Delta x^2}
 $$
 
 
@@ -325,12 +319,8 @@ T_i^n
 +
 \frac{\alpha\Delta t}{\Delta x^2}
 \left(
-T_{i+1}^n
--
-2T_i^n
-+
-T_{i-1}^n
-\right).
+   T_{i+1}^n - 2T_i^n + T_{i-1}^n
+\right)
 $$
 
 
@@ -350,11 +340,7 @@ T_i^n
 +
 r
 \left(
-T_{i+1}^n
--
-2T_i^n
-+
-T_{i-1}^n
+   T_{i+1}^n - 2T_i^n + T_{i-1}^n
 \right)
 }
 $$
@@ -374,11 +360,7 @@ T_i^n
 +
 r
 \left(
-T_{i+1}^n
--
-2T_i^n
-+
-T_{i-1}^n
+   T_{i+1}^n - 2T_i^n + T_{i-1}^n
 \right)
 $$
 
@@ -425,7 +407,7 @@ The grid looks like:
                  │
         t₃       ●──────●──────●──────●──────●
                  │
-             Δt  │  
+              Δt │  
                  │
         t₂       ●──────●──────●──────●──────●
                  │
