@@ -471,7 +471,7 @@ Together these define the mathematical problem that we want to solve numerically
 ---
 # 10. Validity
 
-## 10.1 Accuracy and Stability
+## 10.1 Accuracy and Truncation error
 
 Finite difference formulas are approximations.
 
