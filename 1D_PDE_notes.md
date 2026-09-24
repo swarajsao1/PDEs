@@ -71,11 +71,15 @@ can represent temperature at position $x$ and time $t$.
 
 ---
 
-# 2. Solving PDEs Numerically
+# 2. Solving PDEs
 
 Analytical solutions of PDEs are available only for certain simple problems.
 
-For more complicated problems, we often solve PDEs **numerically**.
+PDEs can be solved analytically using methods such as **separation of variables** and **Fourier series**, where the solution is represented as a sum of simpler functions.
+
+For more complicated problems, we often use **numerical methods**, which approximate the solution at a finite number of points.
+
+Here we will focus on solving PDEs **numerically**.
 
 Some common numerical methods are:
 
