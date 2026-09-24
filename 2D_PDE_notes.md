@@ -1,9 +1,5 @@
 # 2D Mesh representation
 
-$$
-T_{i,j}^{\,n}=T(x_i,y_j,t_n).
-$$
-
 For the 2D heat equation, we discretize both space and time.
 The spatial grid is
 
@@ -17,7 +13,7 @@ The spatial grid is
                  │      │      │      │      │
         y₁       ●──────●──────●──────●──────●
                  │      │      │      │      │
-        y₀       ●──────●──────●──────●──────● ──→ x
+        y₀       ●──────●──────●──────●──────●──→ x
                  x₀     x₁     x₂     x₃     x₄
                            Δx
 ```
@@ -25,6 +21,10 @@ The spatial grid is
 ## The solution
 
 Numerical solution are as a **stack of identical spatial grids**:
+
+$$
+T_{i,j}^{\,n}=T(x_i,y_j,t_n).
+$$
 
 ```text
         t₃ ──→  T³ᵢⱼ
