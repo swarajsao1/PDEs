@@ -432,3 +432,122 @@ T_i^n
 $$
 
 The PDE is then converted into a system of algebraic equations involving these values.
+
+---
+
+# 9. Boundary Conditions
+
+Therefore, a typical time-dependent PDE problem consists of:
+
+1. **The governing PDE**
+2. **Initial conditions**
+3. **Boundary conditions**
+
+For example,
+
+$$
+\frac{\partial u}{\partial t}
+=
+\alpha
+\frac{\partial^2u}{\partial x^2},
+$$
+
+with
+
+$$
+u(x,0)=f(x),
+$$
+
+and
+
+$$
+u(0,t)=u_L,
+\qquad
+u(L,t)=u_R.
+$$
+
+Together these define the mathematical problem that we want to solve numerically.
+
+
+---
+# 10. Validity
+
+## 10.1 Accuracy and Stability
+
+Finite difference formulas are approximations.
+
+For example,
+
+$$
+\frac{df}{dx}
+\approx
+\frac{f_{i+1}-f_{i-1}}{2\Delta x}
+$$
+
+has an error of order
+
+$$
+\mathcal{O}(\Delta x^2).
+$$
+
+This means that when $\Delta x$ becomes smaller, the error decreases approximately as
+
+$$
+(\Delta x)^2.
+$$
+
+For example, if
+
+$$
+\Delta x\rightarrow\frac{\Delta x}{2},
+$$
+
+then the error approximately becomes
+
+$$
+\frac{1}{4}
+$$
+
+of its previous value.
+
+This is why grid resolution is important in numerical PDE calculations.
+
+
+---
+
+## 10.2 Stability
+
+Accuracy alone is not enough.
+
+A numerical method must also be **stable**.
+
+A stable numerical scheme keeps numerical errors under control as the calculation progresses.
+
+For the FTCS scheme for the one-dimensional heat equation, stability requires
+
+$$
+\boxed{
+\frac{\alpha\Delta t}{\Delta x^2}
+\leq
+\frac{1}{2}
+}
+$$
+
+or equivalently,
+
+$$
+\boxed{
+\Delta t
+\leq
+\frac{\Delta x^2}{2\alpha}
+}
+$$
+
+If the time step is too large compared with the spatial grid spacing, the numerical solution can become unstable.
+
+This illustrates an important distinction:
+
+- **Accuracy** asks: How close is the numerical solution to the exact solution?
+- **Stability** asks: Do numerical errors remain controlled during the calculation?
+
+---
