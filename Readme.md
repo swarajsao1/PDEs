@@ -403,7 +403,7 @@ The grid looks like:
 ```text
                ●────●────●────●────●────●──→ x
                0    1    2    3    4    5
-        Δx
+                      Δx
 ```
 
 In 2D the grids look like:
