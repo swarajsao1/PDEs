@@ -1,3 +1,5 @@
-# PDEs 
+# PDEs
+
 # NN
-# PINN
+
+#PINN
