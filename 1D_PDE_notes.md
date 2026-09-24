@@ -425,10 +425,10 @@ Here:
 - $\Delta x$ is the spatial grid spacing.
 - $\Delta t$ is the time step.
 
-Therefore, instead of solving for the continuous function $u(x,t)$, we calculate a finite collection of values
+Therefore, instead of solving for the continuous function $T(x,t)$, we calculate a finite collection of values
 
 $$
-T_i^n.
+T_i^n
 $$
 
 The PDE is then converted into a system of algebraic equations involving these values.
