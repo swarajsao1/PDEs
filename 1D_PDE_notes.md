@@ -415,7 +415,7 @@ The grid looks like:
 The numerical solution is represented as
 
 $$
-u_i^n=u(x_i,t^n).
+T_i^n = T(x_i,t^n).
 $$
 
 Here:
@@ -428,7 +428,7 @@ Here:
 Therefore, instead of solving for the continuous function $u(x,t)$, we calculate a finite collection of values
 
 $$
-u_i^n.
+T_i^n.
 $$
 
 The PDE is then converted into a system of algebraic equations involving these values.
