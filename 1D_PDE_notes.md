@@ -446,8 +446,7 @@ Therefore, a typical time-dependent PDE problem consists of:
 For example,
 
 $$
-\frac{\partial u}{\partial t}
-=
+\frac{\partial u}{\partial t} =
 \alpha
 \frac{\partial^2u}{\partial x^2},
 $$
