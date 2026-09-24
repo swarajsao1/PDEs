@@ -38,8 +38,7 @@ A **Partial Differential Equation (PDE)** involves derivatives with respect to *
 For example,
 
 $$
-\frac{\partial u}{\partial t}
-=
+\frac{\partial u}{\partial t} =
 \alpha
 \frac{\partial^2 u}{\partial x^2}
 $$
@@ -127,8 +126,7 @@ $$
 Using Taylor expansion,
 
 $$
-u(x+\Delta x)
-=
+u(x+\Delta x) =
 u(x)
 +
 \Delta x\frac{du}{dx}
@@ -197,16 +195,15 @@ The **1D heat equation** is
 
 $$
 \boxed{
-\frac{\partial u}{\partial t}
-=
+\frac{\partial T}{\partial t} =
 \alpha
-\frac{\partial^2u}{\partial x^2}
+\frac{\partial^2 T}{\partial x^2}
 }
 $$
 
 where:
 
-- $u(x,t)$ = temperature
+- $T(x,t)$ = temperature
 - $x$ = spatial coordinate
 - $t$ = time
 - $\alpha$ = thermal diffusivity
@@ -219,10 +216,9 @@ The equation describes how temperature evolves due to thermal diffusion.
 The equation
 
 $$
-\frac{\partial u}{\partial t}
-=
+\frac{\partial T}{\partial t} =
 \alpha
-\frac{\partial^2u}{\partial x^2}
+\frac{\partial^2 T}{\partial x^2}
 $$
 
 contains two important quantities.
@@ -230,7 +226,7 @@ contains two important quantities.
 ### Rate of change of temperature
 
 $$
-\frac{\partial u}{\partial t}
+\frac{\partial T}{\partial t}
 $$
 
 describes how temperature changes with time.
@@ -238,7 +234,7 @@ describes how temperature changes with time.
 ### Spatial curvature of temperature
 
 $$
-\frac{\partial^2u}{\partial x^2}
+\frac{\partial^2 T}{\partial x^2}
 $$
 
 describes the spatial curvature of the temperature profile.
@@ -273,7 +269,7 @@ $$
 We denote the numerical solution by
 
 $$
-u_i^n = u(x_i,t^n).
+T_i^n = T(x_i,t^n).
 $$
 
 Here:
@@ -287,9 +283,9 @@ Here:
 Using the forward difference,
 
 $$
-\frac{\partial u}{\partial t}
+\frac{\partial T}{\partial t}
 \approx
-\frac{u_i^{n+1}-u_i^n}{\Delta t}.
+\frac{T_i^{n+1}-T_i^n}{\Delta t}.
 $$
 
 
@@ -298,14 +294,14 @@ $$
 Using the central difference,
 
 $$
-\frac{\partial^2u}{\partial x^2}
+\frac{\partial^2 T}{\partial x^2}
 \approx
 \frac{
-u_{i+1}^n
+T_{i+1}^n
 -
-2u_i^n
+2T_i^n
 +
-u_{i-1}^n
+T_{i-1}^n
 }
 {\Delta x^2}.
 $$
@@ -314,15 +310,15 @@ $$
 Substituting these into the heat equation,
 
 $$
-\frac{u_i^{n+1}-u_i^n}{\Delta t}
+\frac{T_i^{n+1}-T_i^n}{\Delta t}
 =
 \alpha
 \frac{
-u_{i+1}^n
+T_{i+1}^n
 -
-2u_i^n
+2T_i^n
 +
-u_{i-1}^n
+T_{i-1}^n
 }
 {\Delta x^2}.
 $$
@@ -331,17 +327,16 @@ $$
 Rearranging,
 
 $$
-u_i^{n+1}
-=
-u_i^n
+T_i^{n+1} =
+T_i^n
 +
 \frac{\alpha\Delta t}{\Delta x^2}
 \left(
-u_{i+1}^n
+T_{i+1}^n
 -
-2u_i^n
+2T_i^n
 +
-u_{i-1}^n
+T_{i-1}^n
 \right).
 $$
 
@@ -357,17 +352,16 @@ Then,
 
 $$
 \boxed{
-u_i^{n+1}
-=
-u_i^n
+T_i^{n+1} =
+T_i^n
 +
 r
 \left(
-u_{i+1}^n
+T_{i+1}^n
 -
-2u_i^n
+2T_i^n
 +
-u_{i-1}^n
+T_{i-1}^n
 \right)
 }
 $$
@@ -382,31 +376,30 @@ This is the **Forward-Time Central-Space (FTCS)** scheme for the 1D heat equatio
 The numerical equation
 
 $$
-u_i^{n+1}
-=
-u_i^n
+T_i^{n+1} =
+T_i^n
 +
 r
 \left(
-u_{i+1}^n
+T_{i+1}^n
 -
-2u_i^n
+2T_i^n
 +
-u_{i-1}^n
+T_{i-1}^n
 \right)
 $$
 
 says that the temperature at a point at the next time step depends on:
 
-- its current temperature $u_i^n$
-- the temperature of its left neighbor $u_{i-1}^n$
-- the temperature of its right neighbor $u_{i+1}^n$
+- its current temperature $T_i^n$
+- the temperature of its left neighbor $T_{i-1}^n$
+- the temperature of its right neighbor $T_{i+1}^n$
 
 
 The term
 
 $$
-u_{i+1}^n-2u_i^n+u_{i-1}^n
+T_{i+1}^n-2T_i^n + T_{i-1}^n
 $$
 
 measures the local curvature of the temperature profile.
