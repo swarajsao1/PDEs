@@ -296,22 +296,15 @@ Using the central difference,
 $$
 \frac{\partial^2 T}{\partial x^2}
 \approx
-\frac{
-T_{i+1}^n
--
-2T_i^n
-+
-T_{i-1}^n
-}
-{\Delta x^2}.
+\frac{ T_{i+1}^n - 2T_i^n + T_{i-1}^n}
+{\Delta x^2}
 $$
 
 
 Substituting these into the heat equation,
 
 $$
-\frac{T_i^{n+1}-T_i^n}{\Delta t}
-=
+\frac{T_i^{n+1}-T_i^n}{\Delta t} =
 \alpha
 \frac{
 T_{i+1}^n
@@ -432,7 +425,7 @@ The grid looks like:
                  │
         t₃       ●──────●──────●──────●──────●
                  │
-                 │  Δt
+             Δt  │  
                  │
         t₂       ●──────●──────●──────●──────●
                  │
