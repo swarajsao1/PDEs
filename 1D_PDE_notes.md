@@ -410,6 +410,9 @@ The grid looks like:
                       Δx
 ```
 
+
+---
+
 # 8. Solution interpretation
 
 The numerical solution is represented as
@@ -432,6 +435,7 @@ T_i^n
 $$
 
 The PDE is then converted into a system of algebraic equations involving these values.
+
 
 ---
 
@@ -469,6 +473,7 @@ Together these define the mathematical problem that we want to solve numerically
 
 
 ---
+
 # 10. Validity
 
 ## 10.1 Accuracy and Truncation error
@@ -512,7 +517,6 @@ of its previous value.
 This is why grid resolution is important in numerical PDE calculations.
 
 
----
 
 ## 10.2 Stability
 
